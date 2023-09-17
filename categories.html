@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="js/user.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
+          <li id="ctn-busqueda">
+            <div id="icon-busq">
+              <img src="img/Icons/search_FILL0_wght700_GRAD200_opsz48.png" alt="Buscar">
+            </div>
+            <input type="search" id="search-bar" class="oculto" placeholder="Buscar Categoría...">
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
@@ -30,11 +37,15 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+          <li id="usuario">
+
+          </li>
           <li class="nav-item">
           </li>
         </ul>
       </div>
     </div>
+
   </nav>
   <main class="pb-5">
     <div class="text-center p-4">
@@ -44,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-end">
-          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+          <div id="botonordenarpornombre" class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
             <input type="radio" class="btn-check" name="options" id="sortAsc">
             <label class="btn btn-light" for="sortAsc">A-Z</label>
             <input type="radio" class="btn-check" name="options" id="sortDesc">
@@ -100,6 +111,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/categories.js"></script>
+  <script src="js/searchbar.js"></script>
 </body>
 
 </html>
