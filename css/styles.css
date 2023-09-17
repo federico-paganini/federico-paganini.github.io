@@ -185,6 +185,135 @@ a.custom-card:hover {
   text-decoration: inherit;
 }
 
+
+/* Cursor para seleccionar productos */
+.cardcursor {
+  cursor: pointer;
+}
+
 .checked {
   color: orange;
+}
+
+
+/* Buscador Css */
+
+#icon-busq img {
+  width: 35px;
+  transition: all 300ms;
+}
+
+#icon-busq {
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  display: flex;
+}
+
+.oculto {
+  width: 0; 
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  transition: opacity 0,5s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+#search-bar {
+  border: none;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  transition: width 0.5s opacity 0,3s ease-in-out;
+  height: 40px;
+  width: 250px;
+  margin-bottom: 0;
+  margin-top: 50px;
+  background: white;
+  position:absolute;
+}
+
+/* CAMBIOS REALIZADOS POR MATIAS */
+
+#h1deproducts{
+  text-align: center;
+  
+}
+
+#pricefilter{
+  text-align: right;
+  padding-right: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#filtroalfabetico{
+  text-align: right;
+  padding-right: 400px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+/* Tamaño máximo del carrusel */
+#miCarousel {
+  max-width: 50%;
+}
+
+/* Color de fondo de los botones del carrusel, eran blancos y no se veian con algunas imágenes */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(128, 128, 128, 0.404);
+}
+
+  /* Comentario.CCS */
+
+.divGral {
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border: 2px solid rgba(158, 158, 158, 0.5);
+    box-shadow: 0 1px 2px rgba(158, 158, 158, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1 1 10px;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptsg8zYS_SKggPNyCg4Q4FqPfE.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    width: 900px;
+}
+
+
+.estrellas {
+  font-size: 30px; 
+  color: gold;
+  font-style: normal;
+}
+  
+/* Estilos de Estrellas de Calificación */
+.stars-valoration {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stars-label {
+  font-size: 20px;
+  padding: 2px;
+  color: darkgrey;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#stars-container input {
+  display: none;
+}
+
+.stars-label:hover,
+.stars-label.checked{
+  color: gold;
+  text-shadow: 0 0 10px #952;
 }

@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="js/user.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
+          <li id="ctn-busqueda">
+            <div id="icon-busq">
+              <img src="img/Icons/search_FILL0_wght700_GRAD200_opsz48.png" alt="Buscar">
+            </div>
+            <input type="search" id="search-bar" class="oculto" placeholder="Buscar Productos">
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
@@ -30,19 +37,54 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+          <li id="usuario">
+
+          </li>
           <li class="nav-item">
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <main class="pb-5 container">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+
+    <div id="h1deproducts">
+      <h1>PRODUCTOS</h1>
+      <h2>Verás aqui todos los productos de la lista <span id="categoriaTitulo"></span></h2>
       </div>
+    
+      <div id="filtroalfabetico">
+        
+        <button type="button" id="filtrarAZ"> A-Z </button>
+        <button type="button" id="filtrarZA"> Z-A </button>
+
+      </div>
+
+      
+    <div id="pricefilter">
+      <input type="number"  id="minimofiltro1" name="numberminimo" placeholder="Valor desde">
+      <input type="number" id="maximofiltro1" name="numbermaximo" placeholder="Valor hasta">
+      
+      <button type="button" id="menorRelevancia">Menos Relevantes</button>
+      <button type="button" id="mayorRelevancia">Más Relevantes</button>
+      <button type="button" id="accionfiltrar"> FILTRAR </button>
+
+      <button type="button"id="eliminarfiltro"> Quitar Filtro</button>
+      
     </div>
+
+
+
+
+  <main>
+    <div class="container">
+        <div class="row" id="products-container">
+        </div>
+      </div>
   </main>
+
+
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -62,6 +104,10 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/searchbar.js"></script>
 </body>
+
+
+
 
 </html>
