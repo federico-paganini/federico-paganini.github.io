@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     li_nav.classList.add("nav-item");
     li_nav.classList.add("dropdown");
     li_nav.innerHTML = `
-        <span class ="nav-link" id="userdisplay" role="button" data-bs-toggle="dropdown" 
-        aria-expanded="false" data-bs-auto-close="false">${email}
+        <span class ="nav-link ms-lg-0 ms-2" id="userdisplay" role="button" data-bs-toggle="dropdown" 
+        aria-expanded="false" data-bs-auto-close="outside">${email}
         <i class="bi bi-caret-up" id="hideuserm" style="display: none;"></i>
         <i class="bi bi-caret-down" id="showuserm"></i>
         </span>
@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //Aquí comienza el código para crear el menu desplegable del usuario
     let MenuDesplegable = document.createElement("ul");
     MenuDesplegable.classList.add("dropdown-menu");
+    MenuDesplegable.classList.add("dropdown-menu-end");
     MenuDesplegable.classList.add("back-lgmode");
+    MenuDesplegable.classList.add("mt-lg-2");
     MenuDesplegable.setAttribute("id", "usermenubox");
 
     MenuDesplegable.innerHTML = ` 
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </li>
     <li><hr class="dropdown-divider"></li>
     <li>
-        <a class="dropdown-item" href="login.html">
+        <a class="dropdown-item" href="login.html" id="CerrarSesion">
             <i class="bi bi-door-closed"></i> 
             Cerrar sesión
         </a>
@@ -79,7 +81,22 @@ document.addEventListener("DOMContentLoaded", function () {
             li_nav.classList.add("userclicked");
         }
     })
+    
+//Se borran los datos del carrito almacenados en localStorage al cerrar sesión
+    function CerrarSesion(){
+        localStorage.removeItem("carrito")
+        localStorage.removeItem("infoProducto")
+        window.location.href="login.html"
+    };
 
+    const BotonCerrarSesion=document.getElementById("CerrarSesion");
+
+        if (BotonCerrarSesion) {
+            BotonCerrarSesion.addEventListener("click", (e) => {
+                e.preventDefault();
+                CerrarSesion();
+            });
+        };
 
     //Eventos para cambiar el tema de claro a osuro. Algunos elementos no se cambiaban con activar el switch
     //ya que son personalizados, por lo que se trataron de forma específica
